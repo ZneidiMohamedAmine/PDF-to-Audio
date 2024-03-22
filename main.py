@@ -1,9 +1,9 @@
 import pyttsx3
-from PyPDF2 import PdfReader
+import PyPDF4 
 from tkinter.filedialog import *
 
 pdfname = askopenfilename()
-reader = PdfReader(pdfname)
+reader = PyPDF4.PdfFileReader(pdfname)
 Pages = reader.numPages
 
 for num in range(0,Pages):
